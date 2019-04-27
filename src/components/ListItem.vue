@@ -38,6 +38,7 @@ export default {
 
 button {
   background-color: rgb(229, 245, 253);
+  cursor: pointer;
 }
 
 .todo-item {
