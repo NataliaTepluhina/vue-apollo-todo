@@ -32,8 +32,18 @@ export default {
       newItem: "",
       todoItems: [
         {
-          id: "1234",
-          text: "Test todo",
+          id: "1",
+          text: "Build an example app",
+          done: true
+        },
+        {
+          id: "2",
+          text: "Make screenshots",
+          done: false
+        },
+        {
+          id: "3",
+          text: "Write an article",
           done: false
         }
       ]
