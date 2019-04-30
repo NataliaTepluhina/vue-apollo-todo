@@ -44,7 +44,7 @@ export const resolvers = {
       const currentItem = data.todoItems.find(item => item.id === id);
       data.todoItems.splice(data.todoItems.indexOf(currentItem), 1);
       cache.writeQuery({ query: todoItemsQuery, data });
-      return data.todoItems;
+      return true;
     },
   },
 };

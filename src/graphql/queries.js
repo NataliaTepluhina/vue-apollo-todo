@@ -18,7 +18,11 @@ export const checkItemMutation = gql`
 
 export const addItemMutation = gql`
   mutation($text: String!) {
-    addItem(text: $text) @client
+    addItem(text: $text) @client {
+      id
+      text
+      done
+    }
   }
 `;
 
