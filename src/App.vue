@@ -21,12 +21,6 @@
 
 <script>
 import ListItem from "./components/ListItem.vue";
-import {
-  todoItemsQuery,
-  checkItemMutation,
-  addItemMutation,
-  deleteItemMutation
-} from "./graphql/queries.js";
 
 export default {
   name: "app",
@@ -36,36 +30,19 @@ export default {
   data() {
     return {
       newItem: "",
-      todoItems: []
+      todoItems: [
+        {
+          id: "1234",
+          text: "Test todo",
+          done: false
+        }
+      ]
     };
   },
-  apollo: {
-    todoItems: {
-      query: todoItemsQuery
-    }
-  },
   methods: {
-    addItem() {
-      if (this.newItem) {
-        this.$apollo.mutate({
-          mutation: addItemMutation,
-          variables: { text: this.newItem }
-        });
-        this.newItem = "";
-      }
-    },
-    checkItem(id) {
-      this.$apollo.mutate({
-        mutation: checkItemMutation,
-        variables: { id }
-      });
-    },
-    deleteItem(id) {
-      this.$apollo.mutate({
-        mutation: deleteItemMutation,
-        variables: { id }
-      });
-    }
+    addItem() {},
+    checkItem(id) {},
+    deleteItem(id) {}
   }
 };
 </script>
