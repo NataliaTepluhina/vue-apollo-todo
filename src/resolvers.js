@@ -10,7 +10,7 @@ export const typeDefs = gql`
   }
 
   extend type Mutation {
-    changeItem(id: ID!): Boolean
+    checkItem(id: ID!): Boolean
     deleteItem(id: ID!): Boolean
     addItem(text: String!): Item
   }
